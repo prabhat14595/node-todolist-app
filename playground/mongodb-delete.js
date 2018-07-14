@@ -11,6 +11,8 @@ MongoClient.connect('mongodb://localhost:27017/Users', (err, client) =>{
   }
   console.log('connect to the mongodb servers');
   const db = client.db('Users');
+
+
 //
 // //delete many
 //   db.collection('users').deleteMany({age: 22}).then((result)=>{
@@ -24,9 +26,9 @@ MongoClient.connect('mongodb://localhost:27017/Users', (err, client) =>{
 
 //  find one and delete
  db.collection('users').findOneAndDelete({age:23}).then((result)=>{
-   // console.log(result);
+   console.log(result);
    console.log(JSON.stringify(result, undefined, 2));
- })
+ });
 
 
 
